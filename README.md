@@ -2,13 +2,12 @@
 
 - Baixar dependências
 
-    ~$ wget http://pylockfile.googlecode.com/files/lockfile-0.8.tar.gz
+      ~$ wget http://pylockfile.googlecode.com/files/lockfile-0.8.tar.gz
 
 - Instalar dependências
 
-    ~$ sudo apt-get install python2.7
-    ~$ sudo apt-get install python-daemon
-uno
+      ~$ sudo apt-get install python2.7
+      ~$ sudo apt-get install python-daemon uno
 
 - Instalar lockfile
 
@@ -16,34 +15,34 @@ uno
 
 - Instalar distribute para python 3.2
 
-    ~$ cd /usr/lib/python3.2
-    ~$ sudo wget http://python-distribute.org/distribute_setup.py
-    ~$ sudo /usr/bin/python3.2 distribute_setup.py
+      ~$ cd /usr/lib/python3.2
+      ~$ sudo wget http://python-distribute.org/distribute_setup.py
+      ~$ sudo /usr/bin/python3.2 distribute_setup.py
 
 - Instalar virtualenv
 
-    ~$ sudo /usr/local/bin/easy_install virtualenv
-    ~$ sudo /usr/local/bin/virtualenv /srv/lightbase-neo
+      ~$ sudo /usr/local/bin/easy_install virtualenv
+      ~$ sudo /usr/local/bin/virtualenv /srv/lightbase-neo
 
 - Baixar e instalar API
 
-    ~$ sudo svn co http://10.0.0.150/svn/lightbase-neo/trunk/
-    ~$ cd trunk/src/liblightbase
-    ~$ sudo ../../../bin/python3.2 setup.py install //Obs: Certifique-se que deu certo (tente denovo caso não dê)
-    ~$ cd ../LBGenerator
-    ~$ sudo ../../../bin/python3.2 setup.py install
+      ~$ sudo svn co http://10.0.0.150/svn/lightbase-neo/trunk/
+      ~$ cd trunk/src/liblightbase
+      ~$ sudo ../../../bin/python3.2 setup.py install //Obs: Certifique-se que deu certo (tente denovo caso não dê)
+      ~$ cd ../LBGenerator
+      ~$ sudo ../../../bin/python3.2 setup.py install
 
 - Instalar e configurar o apache
 
-    ~$ sudo apt-get install apache2
+      ~$ sudo apt-get install apache2
 
 - Adicione a seguinte linha no arquivo /etc/apache2/apache2.conf
 
-    ServerName localhost
+      ServerName localhost
 
 - Instalar mod-wsgi
 
-    ~$ sudo apt-get install libapache2-mod-wsgi-py3
+      ~$ sudo apt-get install libapache2-mod-wsgi-py3
 
 Certifique-se de dar permissão ao usuário na pasta
 
@@ -76,10 +75,10 @@ Multiple sub-interpreters play badly with C extensions.
 
 - Mude a a linha abaixo, colocando o nome ou ip do seu servidor.
 
-    ServerName neo.lightbase.cc
+      ServerName neo.lightbase.cc
 
 - Reinicie o apache
 
-    ~$ sudo service apache2 restart
+      ~$ sudo service apache2 restart
 
 
