@@ -49,8 +49,8 @@ def extrator(url,outpath,filename):
         # Chama o PDFtoText para converter o arquivo PDF        
         try:
             logger.debug('converter pdf')
-            texto = subprocess.call(["pdftotext", local_path,'-'])
-        except OSError as err:
+            texto = subprocess.check_output(["pdftotext", local_path, '-'])
+        except (OSError, subprocess.CalledProcessError) as err:
             logger.error(err)
 
         
